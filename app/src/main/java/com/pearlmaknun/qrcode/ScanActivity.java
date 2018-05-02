@@ -48,10 +48,9 @@ public class ScanActivity extends AppCompatActivity implements ZXingScannerView.
         AlertDialog alert1 = builder.create();
         alert1.show();*/
 
-        rawResult.getText();
-        String a = rawResult.getBarcodeFormat().toString();
+        String b = rawResult.getText();
         Intent i = new Intent(ScanActivity.this, DisplayActivity.class);
-        i.putExtra( "data", a);
+        i.putExtra( "data", b);
         startActivity(i);
 
         /*mScannerView.resumeCameraPreview(this);*/

@@ -1,5 +1,6 @@
 package com.pearlmaknun.qrcode;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -14,10 +15,11 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
 
         tvdisplay = findViewById(R.id.tv_display);
+        Intent i = getIntent();
 
-        String data = getIntent().getExtras().getString("keyName","defaultKey");
+        String Data = i.getStringExtra("data");
 
-        tvdisplay.setText(data);
+        tvdisplay.setText(Data);
 
     }
 }
